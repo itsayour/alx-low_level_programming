@@ -1,6 +1,6 @@
 #include<stdio.h>
 /**
- * Main - return alphabetics
+ * main - return alphabetics
  * in lower case
  *
  * Return: Success
