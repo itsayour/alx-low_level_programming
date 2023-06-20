@@ -3,7 +3,7 @@
 /**
  * main - printing message followed
  * by a new line
- * Return : 0
+ * Return : Success
  */
 
 int main(void)
