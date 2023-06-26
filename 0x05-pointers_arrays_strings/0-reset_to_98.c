@@ -1,6 +1,6 @@
 /*
  * reset_to_98 - take an addresse and assign
- * 98 to it's variable
+ * 98 to it's variable.
  * @*n: pointer
  * Return: void
  */
