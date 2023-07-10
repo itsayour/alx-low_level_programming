@@ -1,5 +1,6 @@
 #include <stdlib.h>
 char *_strcpy(char *dest, char *src);
+int _strlen(char *s);
 /**
  * argstostr - concatenates all the arguments of your program.
  * @ac: num of arguments in the av.
