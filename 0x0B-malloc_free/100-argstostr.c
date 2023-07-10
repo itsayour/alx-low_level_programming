@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdlib.h>
 char *_strcpy(char *dest, char *src);
 /**
  * argstostr - concatenates all the arguments of your program.
