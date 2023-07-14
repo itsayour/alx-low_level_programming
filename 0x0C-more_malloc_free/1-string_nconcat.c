@@ -2,6 +2,13 @@
 char *_strncat(char *dest, char *src, int n);
 char *_strcpy(char *dest, char *src);
 int _strlen(char *s);
+/**
+ * string_nconcat - function that concatenates two strings.
+ * @s1: ptr to a str.
+ * @s2: ptr to str.
+ * @n: num of bytes concatenated from s2.
+ * Return: str or NULL.
+ */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *str;
@@ -65,22 +72,29 @@ char *_strcpy(char *dest, char *src)
 
 	return (dest);
 }
-
+/**
+ * _strncat - concatenate two strings
+ *
+ * @dest: destination string
+ * @src: source srting
+ * @n: integer that specify the max num of chars copy from src to dest
+ * Return: dest
+ */
 char *_strncat(char *dest, char *src, int n)
 {
 	int i = 0;
 	int k;
 
-	while(dest[i] != '\0')
+	while (dest[i] != '\0')
 	{
 		i++;
 	}
 
-	for ( k = 0; k < n; k++)
+	for (k = 0; k < n; k++)
 	{
 		if (src[k] == '\0')
 		{
-			return dest;
+			return (dest);
 		}
 
 		dest[i] = src[k];
