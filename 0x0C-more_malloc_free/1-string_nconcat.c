@@ -1,0 +1,91 @@
+#include <stdlib.h>
+char *_strncat(char *dest, char *src, int n);
+char *_strcpy(char *dest, char *src);
+int _strlen(char *s);
+char *string_nconcat(char *s1, char *s2, unsigned int n)
+{
+	char *str;
+	int len;
+
+	if (s1 == NULL)
+		s1 = "";
+
+	if (s2 == NULL)
+		s2 = "";
+
+	len = _strlen(s1) + n + 1;
+
+	str = malloc(len);
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+
+	_strcpy(str, s1);
+	_strncat(str, s2, n);
+
+	return (str);
+}
+
+/**
+ *  _strlen -  calculates the length of a string.
+ * @s: pointer to a string.
+ * Return: lenght.
+ */
+
+int _strlen(char *s)
+{
+	int lenght = 0;
+
+	while (*s != '\0')
+	{
+		lenght++;
+		s++;
+	}
+	return (lenght);
+}
+/**
+ * _strcpy - copys str to another
+ * @dest: destination string
+ * @src: the str that we gonna copy
+ *
+ * Return: the pointer to dst
+ */
+
+char *_strcpy(char *dest, char *src)
+{
+	int i = 0;
+
+	while (*(src + i))
+	{
+		*(dest + i) = *(src + i);
+		i++;
+	}
+	*(dest + i) = '\0';
+
+	return (dest);
+}
+
+char *_strncat(char *dest, char *src, int n)
+{
+	int i = 0;
+	int k;
+
+	while(dest[i] != '\0')
+	{
+		i++;
+	}
+
+	for ( k = 0; k < n; k++)
+	{
+		if (src[k] == '\0')
+		{
+			return dest;
+		}
+
+		dest[i] = src[k];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
