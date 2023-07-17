@@ -1,4 +1,4 @@
-ifndef MYFILE_H
+#ifndef MYFILE_H
 #define MYFILE_H
 /**
  * struct dog - has 3 elements.
