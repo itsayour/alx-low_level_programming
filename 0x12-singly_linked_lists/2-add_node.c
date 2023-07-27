@@ -29,7 +29,7 @@ list_t *add_node(list_t **head, const char *str)
 	return (new);
 }
 /**
- * _strlen - func.
+ * str_len - func.
  * @str: str.
  * Return: len.
  */
