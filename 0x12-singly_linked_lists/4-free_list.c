@@ -4,17 +4,20 @@
  * @head: pointer to the head of the list
  * Return: void
  */
+
 void free_list(list_t *head)
 {
 	list_t *curr = head;
 	list_t *next = head;
 
-	if(!head)
+	if (!head)
 		return;
 	while (curr)
 	{
 		next = curr->next;
+		free(curr->str);
 		free(curr);
 		curr = next;
 	}
+
 }
