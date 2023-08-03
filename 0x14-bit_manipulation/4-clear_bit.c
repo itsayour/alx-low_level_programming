@@ -1,12 +1,19 @@
- * @n: ptr to int.
- * @index: index starting from 0 of the bit you want to set.
- * Return: -1 or 1.
- */
-int clear_bit(unsigned long int *n, unsigned int index)
+#include "main.h"
+/**
+ * flip_bits - returns the number of bits fliped.
+ * @n: number.
+ * @m: number.
+ * Return: count.
+*/
+unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	if (!n || index >= sizeof(unsigned long int) * 8)
-		return (-1);
+	unsigned int count = 0;
+	unsigned long int flip = n ^ m;
 
-	*n &= ~(1UL << index);
-	return (1);
+	while (flip != 0)
+	{
+		flip &= (flip - 1);
+		count++;
+	}
+	return (count);
 }
